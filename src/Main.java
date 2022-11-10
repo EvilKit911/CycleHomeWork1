@@ -55,7 +55,8 @@ public class Main {
         int salary = 29000;
         int total = 0;
         for (int i = 1; i <= 12; i++) {
-            total = total + salary;
+            total = total + total/100; // сумма накоплений при накоплении с процентами
+            total = total + salary; // сумма накоплений
             System.out.println("Месяц " + i + ", сумма накоплений равна " + total);
         }
 
