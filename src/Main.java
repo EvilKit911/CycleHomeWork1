@@ -84,13 +84,15 @@ public class Main {
 
         // задача 3
         int y = 12_000_000;
+        int x = 0;
         int thousand = 0;// тысячи =)
         int birth = 17;
         int dead = 8;
         for(i = 1;i <= 10;i++ ){
-            thousand = y / 12000; // привожу 12миллионов к тысячи
+            x = y / 1000;
+            thousand = y / x; // привожу 12миллионов к тысячи
             thousand = thousand + birth - dead;// произвожу нужные вычесления
-            y = thousand * 12000;// возвращаю полученное значение к милионам
+            y = thousand * x;// возвращаю полученное значение к милионам
             System.out.println("Год " + i + " Численность населения составляет " + y);
         }
 
@@ -103,8 +105,49 @@ public class Main {
         for(i = 1; moneyVasa < 12_000_000; i++){
             percent = moneyVasa / 100 * 7;
             moneyVasa = moneyVasa + percent;
-            System.out.println("Месяц " + i + " Накопления " + moneyVasa);
+            if(i % 6 == 0) {
+                System.out.println("Месяц " + i + " Накопления " + moneyVasa);
+            }
+        }
 
+        System.out.println(" ");
+
+        //задача 5
+
+        int moneyVasa1 = 15000;// взнос под процент
+        int percent1 = 0;// процент
+        int year = 12 * 9;// количество месяцов в 9 годах
+        for(int i1 =1;i1 <=year; i1++){
+            percent1 = moneyVasa1 / 100 * 7;
+            moneyVasa1 = moneyVasa1 + percent1;
+            if(i1 % 6 == 0) {
+                System.out.println("Месяц " + i1 + " Накопления " + moneyVasa1);
+            }
+        }
+
+        System.out.println(" ");
+
+        // задача 6
+        int yearComet = 79;
+        int yearDone = 2060;
+        int yearStart = 1820;
+        int yearZero = 0;
+        while(yearZero <= yearDone){
+            yearZero = yearZero + yearComet;
+            if(yearZero >= yearStart){
+             if (yearZero < yearDone){
+                System.out.println("Год когда комета снова пролетит " + yearZero);
+           }}
+        }
+
+        System.out.println(" ");
+
+        // задача 7
+
+        int onePeremen = 2;
+        for(int q = 1; q<=10; q++){
+            int result = onePeremen * q;
+            System.out.println(onePeremen + "*" + q + "=" + result);
         }
 
 
