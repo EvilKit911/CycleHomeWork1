@@ -152,6 +152,18 @@ public class Main {
 
 
 
+        // задание 4.1 про пятницу( случайно пропустил)
+
+        int oneFridayNovember = 4;
+        for(int q = 1; q <= 31; q++){
+            if(oneFridayNovember == q){
+                System.out.println("Сегодня пятница, " + q + "-e число.");
+                oneFridayNovember = oneFridayNovember + 7;
+            }
+        }
+
+
+
 
     }
 }
